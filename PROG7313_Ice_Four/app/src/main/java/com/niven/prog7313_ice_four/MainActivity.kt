@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.SeekBar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
 
     )
 
+    private lateinit var progressSeekBar: SeekBar
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,13 @@ class MainActivity : AppCompatActivity() {
 
         showNextQuiz()
 
+        progressSeekBar = findViewById(R.id.progressSeekBar)
+        progressSeekBar.max = QUIZ_COUNT
+        progressSeekBar.progress = 0  // Initialize to 0
+
+        progressSeekBar.setOnTouchListener { _, _ ->
+            true
+        }
 
     }
 
@@ -120,6 +130,8 @@ class MainActivity : AppCompatActivity() {
 
 
     fun checkQuizCount(){
+
+        progressSeekBar.progress = quizCount
         if (quizCount == QUIZ_COUNT ) {
             // show result
 

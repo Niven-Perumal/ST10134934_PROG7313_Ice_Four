@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <SeekBar
+        android:id="@+id/progressSeekBar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_seekbar"
+        android:thumb="@null"
+        android:clickable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/countLabel"
+        android:layout_marginTop="20dp"/>
+
     <TextView
         android:id="@+id/countLabel"
         android:layout_width="wrap_content"
