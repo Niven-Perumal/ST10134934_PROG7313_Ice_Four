@@ -151,3 +151,19 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+
+/*
+Title: SeekBar
+Author: Android Developers
+Date: 13 March 2025
+Availability: https://developer.android.com/reference/android/widget/SeekBar
+*/
+
+
+/*
+Title: Kotlin libraries mutableListOf
+Author: Kotlin
+Date: 2025
+Availability: https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/mutable-list-of.html
+*/
